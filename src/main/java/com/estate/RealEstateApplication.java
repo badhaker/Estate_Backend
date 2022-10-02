@@ -23,6 +23,7 @@ public class RealEstateApplication extends SpringBootServletInitializer {
 		return springApplicationBuilder.sources(RealEstateApplication.class).properties(getProperties());
 	}
 
+	
 	static Properties getProperties() {
 		Properties props = new Properties();
 		props.put("spring.config.location", AppConstant.FileLocation.PROPERTY_PATH);

@@ -7,7 +7,7 @@ import com.estate.request.UserRegistration;
 
 @Component
 public interface UserService {
-	
-	CommonSuccessResponse userRegistration( UserRegistration userRegistrationRequest);
-	
+
+	CommonSuccessResponse userRegistration(UserRegistration userRegistrationRequest);
+
 }

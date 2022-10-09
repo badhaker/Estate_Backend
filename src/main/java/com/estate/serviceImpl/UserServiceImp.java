@@ -11,20 +11,20 @@ import com.estate.request.UserRegistration;
 import com.estate.service.UserService;
 
 @Service
-public class UserServiceImp implements UserService{
-	
+public class UserServiceImp implements UserService {
+
 	@Autowired
 	UserRepository userRepository;
-	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public CommonSuccessResponse userRegistration(UserRegistration userRegistrationRequest) {
-		
+
 		User user = new User();
 		user.setEmail(userRegistrationRequest.getEmail());
-		user.setName(userRegistrationRequest.getName());	
+		user.setName(userRegistrationRequest.getName());
 		user.setPassword(passwordEncoder.encode(userRegistrationRequest.getPassword()));
 		user.setMobile(userRegistrationRequest.getMobileNumber());
 		userRepository.save(user);

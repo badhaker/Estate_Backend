@@ -51,6 +51,7 @@ public class UserController {
 		response.setHeader(SecurityConstants.SecretKey.TOKEN_HEADER, SecurityConstants.SecretKey.TOKEN_PREFIX + jwt);
 		BaseApiResponse baseApiResponse = ResponseBuilder.getSuccessResponse(commonResponse);
 		return new ResponseEntity<BaseApiResponse>(baseApiResponse, HttpStatus.CREATED);
+		
 
 	}
 

@@ -34,4 +34,7 @@ public class User {
 	@Column(name ="password",nullable = false, columnDefinition = "TEXT")
 	private String password;
 
+	@Column(name ="mobile")
+	private String mobile;
+
 }

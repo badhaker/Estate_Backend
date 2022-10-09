@@ -1,9 +1,14 @@
 package com.estate.request;
 
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
+import org.springframework.validation.annotation.Validated;
+
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.validation.annotation.Validated;
 
 @Builder
 @Data
@@ -23,6 +28,6 @@ public class UserRegistration {
     @Pattern(regexp = "^(0|[1-9][0-9]*)$",message = "Please Enter vailed number")
     @NotEmpty(message = "Mobile Number can not be empty")
     private String mobileNumber;
-}
+
 
 }
